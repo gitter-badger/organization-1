@@ -18,14 +18,14 @@
 	"license": "MIT",
 	"authors": [{
 		"name": "Flipbox Factory",
-		"email": "hello@flipboxdigital.com"
+		"email": "hello@flipboxfactory.com"
 	}],
 	"support": {
-		"email": "support@flipboxdigital.com",
-		"issues": "https://github.com/flipbox/organization/issues?state=open",
-		"source": "https://github.com/flipbox/organization",
-		"docs": "https://github.com/flipbox/organization",
-		"rss": "https://github.com/flipbox/organization/commits/master.atom"
+		"email": "support@flipboxfactory.com",
+		"issues": "https://github.com/flipboxfactory/organization/issues?state=open",
+		"source": "https://github.com/flipboxfactory/organization",
+		"docs": "https://github.com/flipboxfactory/organization",
+		"rss": "https://github.com/flipboxfactory/organization/commits/master.atom"
 	},
 	"require": {
 		"craftcms/cms": "~3.0.0-beta.28",
@@ -50,10 +50,10 @@
 		"name": "Organization",
 		"handle": "organization",
 		"developer": "Flipbox Digital",
-		"developerUrl": "https://www.flipboxdigital.com",
+		"developerUrl": "https://www.flipboxfactory.com",
 		"class": "flipbox\\organization\\Organization",
-		"changelogUrl": "https://raw.githubusercontent.com/flipbox/organization/master/CHANGELOG.md",
-		"downloadUrl": "https://github.com/flipbox/organization/archive/master.zip",
+		"changelogUrl": "https://raw.githubusercontent.com/flipboxfactory/organization/master/CHANGELOG.md",
+		"downloadUrl": "https://github.com/flipboxfactory/organization/archive/master.zip",
 		"hasCpSettings": true,
 		"hasCpSection": true,
 		"schemaVersion": "1.0.0",

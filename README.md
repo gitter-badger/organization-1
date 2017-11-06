@@ -1,17 +1,17 @@
 # Organization Plugin for Craft CMS
-[![Latest Version](https://img.shields.io/github/release/flipbox/organization.svg?style=flat-square)](https://github.com/flipbox/organization/releases)
+[![Latest Version](https://img.shields.io/github/release/flipboxfactory/organization.svg?style=flat-square)](https://github.com/flipboxfactory/organization/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/flipbox/organization/master.svg?style=flat-square)](https://travis-ci.org/flipbox/organization)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/flipbox/organization.svg?style=flat-square)](https://scrutinizer-ci.com/g/flipbox/organization/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/flipbox/organization.svg?style=flat-square)](https://scrutinizer-ci.com/g/flipbox/organization)
-[![Total Downloads](https://img.shields.io/packagist/dt/flipboxdigital/organization.svg?style=flat-square)](https://packagist.org/packages/flipboxdigital/organization)
+[![Build Status](https://img.shields.io/travis/flipboxfactory/organization/master.svg?style=flat-square)](https://travis-ci.org/flipboxfactory/organization)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/flipboxfactory/organization.svg?style=flat-square)](https://scrutinizer-ci.com/g/flipboxfactory/organization/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/flipboxfactory/organization.svg?style=flat-square)](https://scrutinizer-ci.com/g/flipboxfactory/organization)
+[![Total Downloads](https://img.shields.io/packagist/dt/flipboxfactory/organization.svg?style=flat-square)](https://packagist.org/packages/flipboxfactory/organization)
 
 ## Installation
 
 To install, use composer:
 
 ```
-composer require flipboxdigital/organization
+composer require flipboxfactory/organization
 ```
 
 ## Testing
@@ -22,7 +22,7 @@ $ ./vendor/bin/phpunit
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/flipbox/organization/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/flipboxfactory/organization/blob/master/CONTRIBUTING.md) for details.
 
 
 ## Credits
@@ -31,4 +31,4 @@ Please see [CONTRIBUTING](https://github.com/flipbox/organization/blob/master/CO
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/flipbox/organization/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/flipboxfactory/organization/blob/master/LICENSE) for more information.
