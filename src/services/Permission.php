@@ -45,10 +45,10 @@ class Permission extends Component
             $organizationElement->isOwner($userElement) ||
             (
                 $organizationElement->isUser($userElement) &&
-                    Craft::$app->getUserPermissions()->doesUserHavePermission(
-                        $userElement->id,
-                        'updateMyOrganization'
-                    )
+                Craft::$app->getUserPermissions()->doesUserHavePermission(
+                    $userElement->id,
+                    'updateMyOrganization'
+                )
             ) ||
             Craft::$app->getUserPermissions()->doesUserHavePermission(
                 $userElement->id,

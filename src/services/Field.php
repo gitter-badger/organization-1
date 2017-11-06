@@ -16,7 +16,6 @@ use flipbox\organization\elements\Organization as OrganizationElement;
 use flipbox\organization\fields\User as OrganizationUserField;
 use flipbox\organization\Organization as OrganizationPlugin;
 use flipbox\organization\records\User;
-use flipbox\spark\helpers\RecordHelper;
 use yii\base\Component;
 use yii\base\Exception;
 
@@ -89,7 +88,7 @@ class Field extends Component
             return;
         }
 
-        $transaction = RecordHelper::beginTransaction();
+        $transaction = Craft::$app->getDb()->beginTransaction();
 
         try {
             // Delete the existing relations

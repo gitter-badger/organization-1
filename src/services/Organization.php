@@ -13,6 +13,7 @@ use craft\db\Query;
 use craft\elements\db\ElementQueryInterface;
 use craft\elements\db\UserQuery;
 use craft\elements\User as UserElement;
+use craft\helpers\ArrayHelper;
 use craft\helpers\DateTimeHelper;
 use craft\models\FieldLayout as FieldLayoutModel;
 use craft\records\Element as ElementRecord;
@@ -22,8 +23,6 @@ use flipbox\organization\events\ChangeOwner as ChangeOwnerEvent;
 use flipbox\organization\events\ChangeStatus as ChangeStatusEvent;
 use flipbox\organization\Organization as OrganizationPlugin;
 use flipbox\organization\records\Organization as OrganizationRecord;
-use flipbox\spark\helpers\ArrayHelper;
-use flipbox\spark\helpers\RecordHelper;
 use flipbox\spark\helpers\SiteHelper;
 use flipbox\spark\services\Element as ElementService;
 use flipbox\spark\services\traits\Element;
@@ -114,6 +113,7 @@ class Organization extends ElementService
             ]
         );
     }
+
     /**
      * @param $status
      * @return bool
@@ -540,7 +540,7 @@ class Organization extends ElementService
     {
 
         // Db transaction
-        $transaction = RecordHelper::beginTransaction();
+        $transaction = Craft::$app->getDb()->beginTransaction();
 
         try {
             // Primary type (previously saved?)
@@ -731,7 +731,7 @@ class Organization extends ElementService
         OrganizationElement $element,
         $status
     ) {
-    
+
 
         // The before event
         $event = new ChangeStatusEvent([
@@ -752,7 +752,7 @@ class Organization extends ElementService
         }
 
         // Db transaction
-        $transaction = RecordHelper::beginTransaction();
+        $transaction = Craft::$app->getDb()->beginTransaction();
 
         try {
 
@@ -856,7 +856,7 @@ class Organization extends ElementService
         OrganizationElement $element,
         $newOwnerId
     ) {
-    
+
 
         // The event
         $event = new ChangeOwnerEvent([

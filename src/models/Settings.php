@@ -9,8 +9,8 @@
 namespace flipbox\organization\models;
 
 use craft\base\Model;
+use craft\helpers\ArrayHelper;
 use craft\helpers\StringHelper;
-use flipbox\spark\helpers\ArrayHelper;
 use flipbox\spark\helpers\SiteHelper;
 
 /**

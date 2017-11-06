@@ -30,7 +30,7 @@ use flipbox\organization\Organization as OrganizationPlugin;
 use flipbox\organization\records\Organization as OrganizationRecord;
 use flipbox\organization\records\User as OrganizationUsersRecord;
 use flipbox\organization\validators\Owner;
-use flipbox\spark\helpers\ElementHelper;
+use flipbox\spark\helpers\ModelHelper;
 use flipbox\spark\helpers\QueryHelper;
 use yii\base\ErrorException as Exception;
 
@@ -168,7 +168,7 @@ class Organization extends Element
                     ],
                     'safe',
                     'on' => [
-                        ElementHelper::SCENARIO_DEFAULT
+                        ModelHelper::SCENARIO_DEFAULT
                     ]
 
                 ],
@@ -1231,7 +1231,8 @@ class Organization extends Element
         }
 
         return [
-            'templates/render', [
+            'templates/render',
+            [
                 'template' => $primaryTypeSettings->template,
                 'variables' => [
                     'organization' => $this,

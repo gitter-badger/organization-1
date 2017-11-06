@@ -9,8 +9,8 @@
 namespace flipbox\organization\elements\db;
 
 use craft\elements\db\UserQuery;
+use craft\helpers\ArrayHelper;
 use flipbox\organization\helpers\Query as QueryHelper;
-use flipbox\spark\helpers\ArrayHelper;
 
 /**
  * @author Flipbox Factory <hello@flipboxfactory.com>

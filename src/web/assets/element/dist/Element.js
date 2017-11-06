@@ -704,23 +704,23 @@
                     (settings.redirect ? '<input type="hidden" name="redirect" value="' + settings.redirect + '"/>' : '') +
                     '</form>'
                 ).appendTo(Garnish.$bod),
-                $body = $(
-                    '<div class="body">' +
-                    '<p>' + Craft.t('app', 'What do you want to do with their users?') + '</p>' +
-                    '<div class="options">' +
-                    '<label><input type="radio" name="contentAction" value="transfer"/> ' + Craft.t('app', 'Transfer it to:') + '</label>' +
-                    '<div id="transferselect' + this.id + '" class="elementselect">' +
-                    '<div class="elements"></div>' +
-                    '<div class="btn add icon dashed">' + Craft.t('app', 'Choose an organization') + '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div>' +
-                    '<label><input type="radio" name="contentAction" value="delete"/> ' + Craft.t('app', 'Delete it') + '</label>' +
-                    '</div>' +
-                    '</div>'
-                ).appendTo($form),
-                $buttons = $('<div class="buttons right"/>').appendTo($body),
-                $cancelBtn = $('<div class="btn">' + Craft.t('app', 'Cancel') + '</div>').appendTo($buttons);
+                    $body = $(
+                        '<div class="body">' +
+                        '<p>' + Craft.t('app', 'What do you want to do with their users?') + '</p>' +
+                        '<div class="options">' +
+                        '<label><input type="radio" name="contentAction" value="transfer"/> ' + Craft.t('app', 'Transfer it to:') + '</label>' +
+                        '<div id="transferselect' + this.id + '" class="elementselect">' +
+                        '<div class="elements"></div>' +
+                        '<div class="btn add icon dashed">' + Craft.t('app', 'Choose an organization') + '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '<div>' +
+                        '<label><input type="radio" name="contentAction" value="delete"/> ' + Craft.t('app', 'Delete it') + '</label>' +
+                        '</div>' +
+                        '</div>'
+                    ).appendTo($form),
+                    $buttons = $('<div class="buttons right"/>').appendTo($body),
+                    $cancelBtn = $('<div class="btn">' + Craft.t('app', 'Cancel') + '</div>').appendTo($buttons);
 
                 this.$deleteActionRadios = $body.find('input[type=radio]');
                 this.$deleteSubmitBtn = $('<input type="submit" class="btn submit disabled" value="' + Craft.t('organization', 'Delete') + '" />').appendTo($buttons);
@@ -839,7 +839,7 @@
 
             statusSelect: null,
             _updating: false,
-        
+
             init: function (organizationId, settings) {
                 this.id = Math.floor(Math.random() * 1000000000);
                 this.organizationId = organizationId;
@@ -848,7 +848,7 @@
                 var statusOptions = '';
 
                 for (var key in settings.statuses) {
-                    statusOptions += '<option value="'+key+'">'+settings.statuses[key]+'</option>';
+                    statusOptions += '<option value="' + key + '">' + settings.statuses[key] + '</option>';
                 }
                 var $form = $(
                     '<form class="modal fitted changeorganizationstatusmodal" method="post" accept-charset="UTF-8">' +
@@ -858,16 +858,16 @@
                     (settings.redirect ? '<input type="hidden" name="redirect" value="' + settings.redirect + '"/>' : '') +
                     '</form>'
                 ).appendTo(Garnish.$bod),
-                $body = $(
-                    '<div class="body">' +
-                    '<p>' + Craft.t('app', 'Select status:') + '</p>' +
-                    '<div class="options">' +
-                    '<select name="status">' + statusOptions + '</select>' +
-                    '</div>' +
-                    '</div>'
-                ).appendTo($form),
-                $buttons = $('<div class="buttons right"/>').appendTo($body),
-                $cancelBtn = $('<div class="btn">' + Craft.t('app', 'Cancel') + '</div>').appendTo($buttons);
+                    $body = $(
+                        '<div class="body">' +
+                        '<p>' + Craft.t('app', 'Select status:') + '</p>' +
+                        '<div class="options">' +
+                        '<select name="status">' + statusOptions + '</select>' +
+                        '</div>' +
+                        '</div>'
+                    ).appendTo($form),
+                    $buttons = $('<div class="buttons right"/>').appendTo($body),
+                    $cancelBtn = $('<div class="btn">' + Craft.t('app', 'Cancel') + '</div>').appendTo($buttons);
 
                 this.$submitBtn = $('<input type="submit" class="btn submit" value="' + Craft.t('organiation', 'Update') + '" />').appendTo($buttons);
                 this.$spinner = $('<div class="spinner hidden"/>').appendTo($buttons);

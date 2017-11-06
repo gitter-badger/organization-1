@@ -11,11 +11,11 @@ namespace flipbox\organization\helpers;
 use Craft;
 use craft\elements\db\ElementQuery;
 use craft\elements\db\ElementQueryInterface;
+use craft\helpers\ArrayHelper;
 use craft\helpers\Db;
 use craft\helpers\StringHelper;
 use flipbox\organization\records\Organization as OrganizationRecord;
 use flipbox\organization\records\User as OrganizationUsersRecord;
-use flipbox\spark\helpers\ArrayHelper;
 use flipbox\spark\helpers\QueryHelper;
 
 /**
@@ -254,7 +254,7 @@ class Query extends QueryHelper
      *
      * @param $value
      * @param null $operator
-     * @return string
+     * @return string|array
      */
     private static function prependOperator($value, $operator = null)
     {

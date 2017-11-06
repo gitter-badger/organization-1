@@ -13,7 +13,6 @@ use flipbox\organization\elements\Organization as OrganizationElement;
 use flipbox\organization\events\ManageOrganizationType;
 use flipbox\organization\models\Type as TypeModel;
 use flipbox\organization\records\OrganizationType as OrganizationTypeRecord;
-use flipbox\spark\helpers\RecordHelper;
 
 /**
  * @author Flipbox Factory <hello@flipboxfactory.com>
@@ -21,6 +20,7 @@ use flipbox\spark\helpers\RecordHelper;
  *
  * @method TypeModel|null find($identifier, string $toScenario = null)
  * @method TypeModel get($identifier, string $toScenario = null)
+ * @method TypeModel findByCriteria($criteria, string $toScenario = null)
  */
 class Type extends AbstractType
 {
@@ -105,7 +105,7 @@ class Type extends AbstractType
         OrganizationElement $organizationElement,
         $primary = false
     ) {
-    
+
 
         // Set the first association as the primary
         if (!$this->hasPrimaryAssociation($organizationElement)) {
@@ -137,7 +137,7 @@ class Type extends AbstractType
         }
 
         // Db transaction
-        $transaction = RecordHelper::beginTransaction();
+        $transaction = Craft::$app->getDb()->beginTransaction();
 
         // Existing association?
         if (!$this->associationExists($typeModel, $organizationElement)) {
@@ -216,7 +216,7 @@ class Type extends AbstractType
         TypeModel $typeModel,
         OrganizationElement $organizationElement
     ) {
-    
+
 
         // The event
         $event = new ManageOrganizationType([
@@ -240,7 +240,7 @@ class Type extends AbstractType
         }
 
         // Db transaction
-        $transaction = RecordHelper::beginTransaction();
+        $transaction = Craft::$app->getDb()->beginTransaction();
 
         try {
             if ($isPrimary = $this->isPrimaryAssociation($typeModel, $organizationElement)) {
@@ -316,7 +316,7 @@ class Type extends AbstractType
         TypeModel $typeModel,
         OrganizationElement $organizationElement
     ) {
-    
+
 
         // Already set as the primary?
         if ($primaryTypeModel = $this->findPrimaryByOrganization($organizationElement)) {
@@ -327,7 +327,7 @@ class Type extends AbstractType
         }
 
         // Db transaction
-        $transaction = RecordHelper::beginTransaction();
+        $transaction = Craft::$app->getDb()->beginTransaction();
 
         try {
             // Make sure association is made prior to making it primary
@@ -425,7 +425,7 @@ class Type extends AbstractType
         TypeModel $typeModel,
         OrganizationElement $organizationElement
     ) {
-    
+
 
         // Already not the primary?
         if ($primaryTypeModel = $this->findPrimaryByOrganization($organizationElement)) {
@@ -452,7 +452,7 @@ class Type extends AbstractType
         }
 
         // Db transaction
-        $transaction = RecordHelper::beginTransaction();
+        $transaction = Craft::$app->getDb()->beginTransaction();
 
         try {
             // Update

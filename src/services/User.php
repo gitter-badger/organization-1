@@ -18,7 +18,6 @@ use flipbox\organization\events\ManageOrganizationUser;
 use flipbox\organization\helpers\Query as QueryHelper;
 use flipbox\organization\Organization as OrganizationPlugin;
 use flipbox\organization\records\User as OrganizationUserRecord;
-use flipbox\spark\helpers\RecordHelper;
 use yii\base\Component;
 use yii\base\ErrorException as Exception;
 
@@ -336,8 +335,8 @@ class User extends Component
             $query = OrganizationPlugin::getInstance()->getOrganization()->getQuery(
                 array_merge(
                     [
-                    'id' => 'not ' . $organizationElement->id,
-                    'status' => null
+                        'id' => 'not ' . $organizationElement->id,
+                        'status' => null
                     ],
                     $criteria
                 )
@@ -349,7 +348,7 @@ class User extends Component
         }
 
         // Db transaction
-        $transaction = RecordHelper::beginTransaction();
+        $transaction = Craft::$app->getDb()->beginTransaction();
 
         try {
             // New record

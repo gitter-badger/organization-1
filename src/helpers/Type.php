@@ -8,9 +8,9 @@
 
 namespace flipbox\organization\helpers;
 
+use craft\helpers\ArrayHelper;
 use flipbox\organization\models\Type as TypeModel;
 use flipbox\organization\Organization as OrganizationPlugin;
-use flipbox\spark\helpers\ArrayHelper;
 
 /**
  * @author Flipbox Factory <hello@flipboxfactory.com>

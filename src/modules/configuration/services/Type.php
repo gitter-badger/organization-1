@@ -9,6 +9,7 @@
 namespace flipbox\organization\modules\configuration\services;
 
 use Craft;
+use craft\db\Query;
 use craft\helpers\App;
 use craft\helpers\ArrayHelper;
 use flipbox\organization\elements\db\Organization;
@@ -31,6 +32,24 @@ class Type extends AbstractType
     use ModelSave, ModelDelete {
         ModelSave::beforeSave as _beforeSave;
         ModelSave::afterSave as _afterSave;
+    }
+
+    /**
+     * @param TypeModel $type
+     * @return bool
+     */
+    public function isNew(TypeModel $type): bool
+    {
+        return $type->getId() !== null;
+    }
+
+    /**
+     * @param array $config
+     * @return Query
+     */
+    public function getQuery($config = []): Query
+    {
+        return new Query();
     }
 
     /**

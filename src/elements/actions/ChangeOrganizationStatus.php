@@ -14,6 +14,7 @@ use craft\elements\db\ElementQueryInterface;
 use craft\helpers\Json;
 use flipbox\organization\elements\Organization;
 use flipbox\organization\Organization as OrganizationPlugin;
+use yii\base\Exception;
 
 /**
  * @author Flipbox Factory <hello@flipboxfactory.com>

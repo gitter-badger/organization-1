@@ -25,8 +25,8 @@ use flipbox\organization\elements\db\Organization as OrganizationQuery;
 use flipbox\organization\elements\Organization as OrganizationElement;
 use flipbox\organization\helpers\Query as QueryHelper;
 use flipbox\organization\Organization as OrganizationPlugin;
-use flipbox\organization\records\User as OrganizationUserRecord;
 use flipbox\organization\queue\jobs\LocalizeRelations;
+use flipbox\organization\records\User as OrganizationUserRecord;
 use flipbox\organization\validators\User as UserValidator;
 use yii\base\Exception;
 
@@ -221,12 +221,12 @@ class User extends Field implements PreviewableFieldInterface, EagerLoadingField
                 'max' => $this->allowLimit && $this->limit ? $this->limit : null,
                 'tooFew' => Craft::t(
                     'app',
-                    '{attribute} should contain at least {min, number} '.
+                    '{attribute} should contain at least {min, number} ' .
                     '{min, plural, one{selection} other{selections}}.'
                 ),
                 'tooMany' => Craft::t(
                     'app',
-                    '{attribute} should contain at most {max, number} '.
+                    '{attribute} should contain at most {max, number} ' .
                     '{max, plural, one{selection} other{selections}}.'
                 ),
             ],
@@ -580,8 +580,8 @@ class User extends Field implements PreviewableFieldInterface, EagerLoadingField
                             'app',
                             'Which site do you want to select {type} in?',
                             [
-                                    'type' => StringHelper::toLowerCase(static::displayName())
-                                ]
+                                'type' => StringHelper::toLowerCase(static::displayName())
+                            ]
                         ),
                         'id' => 'targetSiteId',
                         'name' => 'targetSiteId',

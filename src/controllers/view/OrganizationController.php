@@ -53,7 +53,7 @@ class OrganizationController extends AbstractController
 
         // Register our asset bundle
         Craft::$app->getView()->registerAssetBundle(Element::class);
-        
+
         // Empty variables for template
         $variables = [];
 
@@ -114,7 +114,7 @@ class OrganizationController extends AbstractController
             if ($activeType = $organization->getActiveType()) {
                 $variables['continueEditingUrl'] .= '/' . $activeType->handle;
             }
-            
+
             // Append title
             $variables['title'] .= ': ' . Craft::t('organization', 'Edit');
 
