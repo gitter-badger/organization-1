@@ -1,4 +1,6 @@
 # Organization Plugin for Craft CMS
+
+[![Join the chat at https://gitter.im/flipboxfactory/organization](https://badges.gitter.im/flipboxfactory/organization.svg)](https://gitter.im/flipboxfactory/organization?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Latest Version](https://img.shields.io/github/release/flipboxfactory/organization.svg?style=flat-square)](https://github.com/flipboxfactory/organization/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/flipboxfactory/organization/master.svg?style=flat-square)](https://travis-ci.org/flipboxfactory/organization)
